@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>山田海斗 | Game Programmer Portfolio</title>
+<title>村松秀哉 | Game Programmer Portfolio</title>
 <meta name="description" content="ゲームプログラマーのポートフォリオサイト。作品とスキルを紹介しています。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -269,18 +269,6 @@
     }, 1900);
   }
  
-  // FPSカウンターの演出（実際の計測ではなく、雰囲気を出すための擬似カウントアップ）
-  const fpsEl = document.getElementById('fpsCounter');
-  if (!prefersReducedMotion) {
-    let fps = 0;
-    const fpsInterval = setInterval(() => {
-      fps += 6;
-      if (fps >= 60) { fps = 60; clearInterval(fpsInterval); }
-      fpsEl.textContent = fps;
-    }, 90);
-  } else {
-    fpsEl.textContent = '60';
-  }
 </script>
  
 </body>
