@@ -1,10 +1,287 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>My HomePage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山田海斗 | Game Programmer Portfolio</title>
+<meta name="description" content="ゲームプログラマーのポートフォリオサイト。作品とスキルを紹介しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello GitHub Pages!</h1>
+ 
+<!-- CRTのスキャンライン風の背景演出。装飾のみでコンテンツはありません -->
+<div class="scanlines" aria-hidden="true"></div>
+ 
+<!-- ===== ナビゲーション ===== -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo">&gt; dev.log</a>
+  <nav class="nav-links">
+    <a href="#about">ABOUT</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+ 
+<!-- ===== HERO：起動シーケンス ===== -->
+<section class="hero" id="top">
+  <div class="boot" id="boot" aria-hidden="true">
+    <p class="boot-line">&gt; booting portfolio.exe ...</p>
+    <p class="boot-line">&gt; loading assets [||||||||||] 100%</p>
+    <p class="boot-line">&gt; compiling scenes ... OK</p>
+    <p class="boot-line">&gt; frame rate locked at 60fps</p>
+    <p class="boot-line boot-ready">&gt; READY_</p>
+  </div>
+ 
+  <div class="hero-content" id="heroContent">
+    <p class="hero-tag">PLAYER READY</p>
+    <!-- ここをあなたの名前に差し替えてください -->
+    <h1 class="hero-name">山田 海斗</h1>
+    <p class="hero-role">Game Programmer <span class="dim">/</span> Unity &amp; C++ Engineer</p>
+    <p class="hero-desc">
+      プレイヤーの手触りにこだわるゲームプログラマーです。
+      アクションゲームの挙動設計から描画最適化まで、
+      「気持ちいい」を数値とコードに落とし込むのが得意です。
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">プロジェクトを見る</a>
+      <a href="#contact" class="btn btn-ghost">連絡する</a>
+    </div>
+  </div>
+ 
+  <div class="hero-hud" aria-hidden="true">
+    <span>FPS <b id="fpsCounter">0</b></span>
+    <span class="hud-sep">|</span>
+    <span>BUILD v1.0.0</span>
+  </div>
+</section>
+ 
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="section-head">
+    <p class="eyebrow">01 // PROFILE</p>
+    <h2>process.log</h2>
+  </div>
+ 
+  <div class="about-grid">
+    <div class="about-text">
+      <!-- 自己紹介文を書き換えてください -->
+      <p>
+        大学でゲームAIと物理シミュレーションを学んだのち、
+        インディースタジオで3年間アクションゲームの開発に従事。
+        現在はキャラクターの挙動制御とパフォーマンス最適化を専門にしています。
+      </p>
+      <p>
+        小さなバグ修正から大きな仕様設計まで、
+        「なぜそう動くのか」を突き詰めることを大切にしています。
+        休日は自作のツールでゲームジャムに参加するのが楽しみです。
+      </p>
+    </div>
+ 
+    <div class="about-hud">
+      <div class="hud-stat">
+        <span class="hud-label">EXPERIENCE</span>
+        <span class="hud-value">3<span class="hud-unit">年</span></span>
+      </div>
+      <div class="hud-stat">
+        <span class="hud-label">SHIPPED TITLES</span>
+        <span class="hud-value">4<span class="hud-unit">本</span></span>
+      </div>
+      <div class="hud-stat">
+        <span class="hud-label">FAVORITE ENGINE</span>
+        <span class="hud-value hud-value-text">Unity</span>
+      </div>
+      <div class="hud-stat">
+        <span class="hud-label">CURRENT QUEST</span>
+        <span class="hud-value hud-value-text">自作エンジン開発</span>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== PROJECTS：レベルセレクト風 ===== -->
+<section class="projects" id="projects">
+  <div class="section-head">
+    <p class="eyebrow">02 // SELECT STAGE</p>
+    <h2>projects</h2>
+  </div>
+ 
+  <div class="level-grid">
+ 
+    <!-- プロジェクトカードは複製して増やせます -->
+    <article class="level-card">
+      <div class="level-card-top">
+        <span class="level-num">LEVEL 01</span>
+        <span class="level-status">CLEAR</span>
+      </div>
+      <h3>Echo Drift</h3>
+      <p>音波を頼りに進む2Dパズルアクション。反響を可視化するオリジナルシェーダーを実装。</p>
+      <ul class="tech-tags">
+        <li>Unity</li><li>C#</li><li>Shader Graph</li>
+      </ul>
+      <div class="level-links">
+        <a href="#">プレイ →</a>
+        <a href="#">ソースコード →</a>
+      </div>
+    </article>
+ 
+    <article class="level-card">
+      <div class="level-card-top">
+        <span class="level-num">LEVEL 02</span>
+        <span class="level-status">CLEAR</span>
+      </div>
+      <h3>Pixel Forge Engine</h3>
+      <p>学習用に自作した軽量2Dゲームエンジン。ECS構成とタイルマップエディタを内蔵。</p>
+      <ul class="tech-tags">
+        <li>C++</li><li>OpenGL</li><li>ECS</li>
+      </ul>
+      <div class="level-links">
+        <a href="#">デモ →</a>
+        <a href="#">ソースコード →</a>
+      </div>
+    </article>
+ 
+    <article class="level-card">
+      <div class="level-card-top">
+        <span class="level-num">LEVEL 03</span>
+        <span class="level-status">IN PROGRESS</span>
+      </div>
+      <h3>Nightfall Arena</h3>
+      <p>4人対戦の見下ろし型シューター。ネットコードとロールバック実装を担当。</p>
+      <ul class="tech-tags">
+        <li>Unreal Engine</li><li>C++</li><li>Netcode</li>
+      </ul>
+      <div class="level-links">
+        <a href="#">プレイ →</a>
+        <a href="#">ソースコード →</a>
+      </div>
+    </article>
+ 
+    <article class="level-card">
+      <div class="level-card-top">
+        <span class="level-num">LEVEL 04</span>
+        <span class="level-status">CLEAR</span>
+      </div>
+      <h3>Terrain Tool Kit</h3>
+      <p>手続き型地形生成のためのエディタ拡張。ノイズ関数を組み合わせて地形を即座にプレビュー。</p>
+      <ul class="tech-tags">
+        <li>Unity</li><li>Editor Extension</li><li>Procedural Gen</li>
+      </ul>
+      <div class="level-links">
+        <a href="#">デモ →</a>
+        <a href="#">ソースコード →</a>
+      </div>
+    </article>
+ 
+  </div>
+</section>
+ 
+<!-- ===== SKILLS ===== -->
+<section class="skills" id="skills">
+  <div class="section-head">
+    <p class="eyebrow">03 // INVENTORY</p>
+    <h2>skills</h2>
+  </div>
+ 
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h3>言語</h3>
+      <ul class="inv-slots">
+        <li>C#</li><li>C++</li><li>Python</li><li>HLSL</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>エンジン / ツール</h3>
+      <ul class="inv-slots">
+        <li>Unity</li><li>Unreal Engine</li><li>Git</li><li>Perforce</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>専門領域</h3>
+      <ul class="inv-slots">
+        <li>ゲームプレイ実装</li><li>描画最適化</li><li>物理演算</li><li>ネットコード</li>
+      </ul>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="section-head">
+    <p class="eyebrow">04 // CONNECT</p>
+    <h2>contact</h2>
+  </div>
+ 
+  <div class="terminal">
+    <p class="terminal-line">$ open --contact</p>
+    <p class="terminal-line">&gt; お気軽にご連絡ください。新しいプロジェクトのご相談、大歓迎です。</p>
+    <div class="contact-links">
+      <!-- リンク先を実際のものに差し替えてください -->
+      <a href="mailto:you@example.com" class="btn btn-primary">メールを送る</a>
+      <a href="https://github.com/yourname" class="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/yourname" class="btn btn-ghost" target="_blank" rel="noopener">X (Twitter)</a>
+    </div>
+  </div>
+</section>
+ 
+<footer class="footer">
+  <p>&copy; 2026 Kaito Yamada. Built &amp; deployed with GitHub Pages.</p>
+</footer>
+ 
+<script>
+  // ナビの開閉（モバイル）
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+ 
+  // スクロールでナビに背景をつける
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('is-scrolled', window.scrollY > 20);
+  });
+ 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const boot = document.getElementById('boot');
+  const heroContent = document.getElementById('heroContent');
+ 
+  if (prefersReducedMotion) {
+    boot.style.display = 'none';
+    heroContent.classList.add('is-visible');
+  } else {
+    // 起動シーケンス風の演出。終わったらヒーローを表示
+    setTimeout(() => {
+      boot.classList.add('is-hidden');
+      heroContent.classList.add('is-visible');
+    }, 1900);
+  }
+ 
+  // FPSカウンターの演出（実際の計測ではなく、雰囲気を出すための擬似カウントアップ）
+  const fpsEl = document.getElementById('fpsCounter');
+  if (!prefersReducedMotion) {
+    let fps = 0;
+    const fpsInterval = setInterval(() => {
+      fps += 6;
+      if (fps >= 60) { fps = 60; clearInterval(fpsInterval); }
+      fpsEl.textContent = fps;
+    }, 90);
+  } else {
+    fpsEl.textContent = '60';
+  }
+</script>
+ 
 </body>
 </html>
